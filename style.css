@@ -1,0 +1,107 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* ── Header ── */
+header {
+  padding: 48px 0 32px;
+  text-align: center;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+/* ── Sections ── */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+section { margin-bottom: 64px; }
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 440px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+/* ── Photos ── */
+.grid-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.grid-photo:hover { opacity: 0.8; }
+
+/* ── Videos ── */
+.grid-video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: block;
+  background: #111;
+}
+
+/* iframe embeds (Vimeo/YouTube) */
+.grid-video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.grid-video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Lightbox ── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 100;
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox.open { display: flex; }
+
+#lightbox-img {
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
