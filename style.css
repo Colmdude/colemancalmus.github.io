@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background: #000;
+  background: #060d1f;
   color: #fff;
 }
 
@@ -13,7 +13,7 @@ header {
 }
 
 .name {
-  font-family: 'Pinyon Script', cursive;
+  font-family: 'Allura', cursive;
   font-size: 5rem;
   font-weight: 400;
   color: #ff8c00;
