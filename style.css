@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: 'Cinzel', serif;
+  font-family: 'Barlow', sans-serif;
   background: #060d1f;
   color: #fff;
 }
@@ -13,9 +13,9 @@ header {
 }
 
 .name {
-  font-family: 'Cinzel', serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #ff8c00;
@@ -32,7 +32,7 @@ main {
 section { margin-bottom: 64px; }
 
 .section-label {
-  font-family: 'Cinzel', serif;
+  font-family: 'Barlow', sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.3em;
@@ -44,30 +44,22 @@ section { margin-bottom: 64px; }
 /* ── Grid ── */
 .grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 /* ── Photos ── */
 .grid-photo {
-  width: calc(33.33% - 6px);
-  aspect-ratio: 4/3;
-  object-fit: cover;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
   display: block;
   cursor: pointer;
   transition: opacity 0.2s;
 }
 
-.grid-photo:hover { opacity: 0.8; }
-
-@media (max-width: 700px) {
-  .grid-photo { width: calc(50% - 6px); }
-}
-
-@media (max-width: 440px) {
-  .grid-photo { width: 100%; }
-}
+.grid-photo:hover { opacity: 0.85; }
 
 /* ── Videos ── */
 .grid-video {
